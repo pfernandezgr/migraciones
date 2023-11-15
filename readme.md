@@ -41,3 +41,39 @@ Después de configurar el servidor, procedemos a la configuración del proyecto.
 1. Abrir el proyecto (File -> Open Project from File System).
 2. En Eclipse, abrir el archivo `config.properties` ubicado en la carpeta `properties`. Si no cuenta con esta carpeta, debe reutilizar (clonar, copiar/pegar) la carpeta `properties_example`.
 3. Dentro de este archivo, configure el path a la base de datos, el usuario y la contraseña (encriptada en Base64). Ejemplo:
+
+    ```
+	Db.url=jdbc:postgresql://192.168.9.58:5432/NombreDeBaseDeDatos
+	Db.usr=nombreUsuario
+	Db.pwd=contraseñaEnBase64
+	Db.insusr= nombreUsuario
+	Db.inspwd= contraseñaEnBase64
+    ```
+4. Asegúrese de que exista una conexión entre el host donde se encuentra el servidor Tomcat (en este caso, localhost si se está trabajando desde el PC con Eclipse) y el servidor que aloja la base de datos.
+
+### Configuración de Maven
+
+Para descargar la última versión de Apia, utilizaremos Maven. A continuación, una breve descripción de Maven:
+
+Maven es una herramienta de gestión de proyectos ampliamente utilizada en el desarrollo de software, especialmente en proyectos basados en Java. Su objetivo principal es facilitar la construcción, el empaquetado, compilación y la gestión de dependencias de un proyecto.
+
+Estas son algunas de las funciones principales de Maven:
+
+- **Gestión de dependencias:** Maven facilita la gestión de las dependencias de un proyecto. Puede declarar las dependencias del proyecto en un archivo de configuración llamado "pom.xml" (Project Object Model), y Maven se encarga de descargar automáticamente las dependencias requeridas desde repositorios remotos.
+
+- **Construcción y gestión del ciclo de vida:** Maven proporciona un conjunto de fases y metas predefinidas que definen el ciclo de vida de un proyecto. Estas fases incluyen la compilación, prueba, empaquetado, instalación y despliegue del proyecto. Al ejecutar un objetivo específico, Maven realiza las tareas necesarias en el orden correcto según el ciclo de vida del proyecto.
+
+- **Construcción consistente:** Maven promueve una estructura de proyecto estandarizada y una forma consistente de organizar los recursos y el código fuente. Esto facilita la comprensión y el mantenimiento del proyecto, especialmente cuando varios desarrolladores trabajan en él.
+
+- **Gestión de configuraciones y perfiles:** Maven permite definir diferentes perfiles de construcción que se pueden activar según las necesidades. Esto es útil cuando se deben realizar compilaciones para diferentes entornos (desarrollo, prueba, producción) o cuando se requiere configuraciones específicas para diferentes plataformas.
+
+- **Generación de informes y documentación:** Maven puede generar informes automáticos sobre diferentes aspectos del proyecto, como cobertura de pruebas, métricas de código, documentación del proyecto, entre otros. Esto ayuda a mantener un control sobre la calidad del código y facilita la generación de documentación actualizada del proyecto.
+
+**Configuración:**
+Para que Maven pueda descargar las librerías necesarias y luego se compile el proyecto, necesitamos la siguiente configuración:
+
+
+
+
+
+Este README proporciona una guía completa para configurar el entorno de desarrollo, descargar el proyecto desde GitLab y utilizar Maven para gestionar las dependencias y compilar el proyecto APIA. Siga cuidadosamente cada paso para garantizar una configuración correcta y un desarrollo sin problemas.
