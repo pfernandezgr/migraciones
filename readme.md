@@ -85,16 +85,6 @@ img
 
 6. URL para ingresar a la aplicación web: [localhost:PORT/Apia](localhost:PORT/Apia)
 
-7. ID Uruguay en ambiente de desarrollo:
-- Para utilizar el servicio de ID UY necesitamos realizar el procedimiento de solicitud adjunto en esta documentación: [ID Uruguay - Preguntas frecuentes Agentes](https://interfaseisa.atlassian.net/l/cp/cK3jHZ38)
-- Configuración de archivo hosts de Windows:
-  ```
-  127.0.0.1 tramites-desa.maldonado.gub.uy
-  ```
-
-- Para configurar el acceso a ID Uruguay necesitamos configurar samlLogin.properties de la carpeta certs/saml:
-  - Se debe referenciar el archivo .p12 generado y enviado adjunto al formulario del certificado enviado para Agesic.
-  - Importante referenciar archivo coesys Agesic-Coesys-Testing.cer. Viene dentro de la instalación de Apia y también está disponible para descargar desde Agesic: [Coesys Agesic-Coesys-Testing.cer](https://centroderecursos.agesic.gub.uy/web/seguridad/wiki/-/wiki/Main/ID+Uruguay+-+Preguntas+frecuentes+Agentes)
 
 ### Servidor de Base de Datos
 
